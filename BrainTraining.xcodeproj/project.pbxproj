@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		4BF9B65323D2766400EAC299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9B65123D2766400EAC299 /* Main.storyboard */; };
 		4BF9B65523D2766500EAC299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9B65423D2766500EAC299 /* Assets.xcassets */; };
 		4BF9B65823D2766500EAC299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF9B65623D2766500EAC299 /* LaunchScreen.storyboard */; };
+		4BF9B66123D27E2800EAC299 /* LBTATools in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF9B66023D27E2800EAC299 /* LBTATools */; };
+		4BF9B66323D2849600EAC299 /* DrawingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9B66223D2849600EAC299 /* DrawingImageView.swift */; };
+		4BF9B66523D28F7800EAC299 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9B66423D28F7800EAC299 /* Question.swift */; };
+		4BF9B66723D29D9300EAC299 /* Digits.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9B66623D29D9300EAC299 /* Digits.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		4BF9B65423D2766500EAC299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BF9B65723D2766500EAC299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BF9B65923D2766500EAC299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BF9B66223D2849600EAC299 /* DrawingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingImageView.swift; sourceTree = "<group>"; };
+		4BF9B66423D28F7800EAC299 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		4BF9B66623D29D9300EAC299 /* Digits.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Digits.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF9B66123D27E2800EAC299 /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,9 @@
 				4BF9B64B23D2766400EAC299 /* AppDelegate.swift */,
 				4BF9B64D23D2766400EAC299 /* SceneDelegate.swift */,
 				4BF9B64F23D2766400EAC299 /* ViewController.swift */,
+				4BF9B66223D2849600EAC299 /* DrawingImageView.swift */,
+				4BF9B66623D29D9300EAC299 /* Digits.mlmodel */,
+				4BF9B66423D28F7800EAC299 /* Question.swift */,
 				4BF9B65123D2766400EAC299 /* Main.storyboard */,
 				4BF9B65423D2766500EAC299 /* Assets.xcassets */,
 				4BF9B65623D2766500EAC299 /* LaunchScreen.storyboard */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = BrainTraining;
+			packageProductDependencies = (
+				4BF9B66023D27E2800EAC299 /* LBTATools */,
+			);
 			productName = BrainTraining;
 			productReference = 4BF9B64823D2766400EAC299 /* BrainTraining.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 4BF9B63F23D2766400EAC299;
+			packageReferences = (
+				4BF9B65F23D27E2800EAC299 /* XCRemoteSwiftPackageReference "LBTATools" */,
+			);
 			productRefGroup = 4BF9B64923D2766400EAC299 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF9B66523D28F7800EAC299 /* Question.swift in Sources */,
 				4BF9B65023D2766400EAC299 /* ViewController.swift in Sources */,
 				4BF9B64C23D2766400EAC299 /* AppDelegate.swift in Sources */,
+				4BF9B66723D29D9300EAC299 /* Digits.mlmodel in Sources */,
 				4BF9B64E23D2766400EAC299 /* SceneDelegate.swift in Sources */,
+				4BF9B66323D2849600EAC299 /* DrawingImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4EFH9TWN7W;
 				INFOPLIST_FILE = BrainTraining/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thainguyen.BrainTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4EFH9TWN7W;
 				INFOPLIST_FILE = BrainTraining/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thainguyen.BrainTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -338,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4BF9B65F23D27E2800EAC299 /* XCRemoteSwiftPackageReference "LBTATools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bhlvoong/LBTATools";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4BF9B66023D27E2800EAC299 /* LBTATools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BF9B65F23D27E2800EAC299 /* XCRemoteSwiftPackageReference "LBTATools" */;
+			productName = LBTATools;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4BF9B64023D2766400EAC299 /* Project object */;
 }
